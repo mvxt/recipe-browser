@@ -1,0 +1,50 @@
+@charset "utf-8"
+
+.space-above
+  margin-top: 20px
+
+.paragraph
+  margin: 10px 0px
+  list-style: inside
+
+.resize-hack
+  height: 20px !important
+  transform: translate(4px, 10px)
+
+.tab-content
+  display: none
+
+  &.is-active
+    display: block
+
+// Bulma Global Bariables
+$fullhd-enabled: false
+$widescreen-enabled: false
+
+// Bulma Basics
+@import "../node_modules/bulma/sass/utilities/_all.sass"
+@import "../node_modules/bulma/sass/base/_all.sass"
+@import "../node_modules/bulma/sass/grid/_all.sass"
+@import "../node_modules/bulma/sass/helpers/_all.sass"
+@import "../node_modules/bulma/sass/layout/_all.sass"
+
+// Bulma Elements
+@import "../node_modules/bulma/sass/elements/box.sass"
+@import "../node_modules/bulma/sass/elements/button.sass"
+@import "../node_modules/bulma/sass/elements/container.sass"
+@import "../node_modules/bulma/sass/elements/content.sass"
+@import "../node_modules/bulma/sass/elements/image.sass"
+@import "../node_modules/bulma/sass/elements/tag.sass"
+@import "../node_modules/bulma/sass/elements/title.sass"
+
+// Bulma Components
+@import "../node_modules/bulma/sass/components/card.sass"
+@import "../node_modules/bulma/sass/components/modal.sass"
+@import "../node_modules/bulma/sass/components/navbar.sass"
+@import "../node_modules/bulma/sass/components/tabs.sass"
+
+// Bulma Forms
+@import "../node_modules/bulma/sass/form/shared.sass"
+@import "../node_modules/bulma/sass/form/tools.sass"
+@import "../node_modules/bulma/sass/form/input-textarea.sass"
+
