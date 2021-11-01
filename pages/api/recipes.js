@@ -29,6 +29,8 @@ const handler = async (req, res) => {
       });
 
       res.json(output);
+      res.end();
+      return;
     default:
       res.status(403).end('Method not allowed.');
       return;
