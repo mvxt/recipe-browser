@@ -1,17 +1,10 @@
 import { createElement, useEffect, useState } from 'react';
 import SyncLoader from "react-spinners/SyncLoader";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { config } from "@fortawesome/fontawesome-svg-core";
-
 import Layout from 'components/layout';
 import Modal from 'components/modal';
 import Tab from 'components/tab';
 import Tile from 'components/tile';
-
-// Workaround for FontAwesome CSS issues
-config.autoAddCss = false;
 
 export default function Index(props) {
   const [activeTab, setActiveTab] = useState('Chicken');
