@@ -11,6 +11,7 @@ export default function Navbar() {
           src={logoSquare}
           alt="Gastronome logo"
         />
+        &emsp;Recipe Browser
       </a>
 
       <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

@@ -13,7 +13,7 @@ export default function Index(props) {
   const [modalInfo, setModalInfo] = useState({});
 
   const tabs = [
-    'Chicken', 'Beef', 'Pork', 'Vegetarian'
+    'Chicken', 'Beef', 'Pork', 'Vegetarian', 'Vegan'
   ];
 
   const getRecipes = async (options = []) => {
@@ -78,7 +78,7 @@ export default function Index(props) {
   }, [activeTab]);
 
   return (
-    <Layout title="Recipe Browser">
+    <Layout>
       <div className="tabs is-boxed is-centered is-medium">
         <ul>
           {tabs.map(renderTabs)}

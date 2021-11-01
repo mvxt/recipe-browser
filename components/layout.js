@@ -11,13 +11,14 @@ export default function Layout({ children, ...props }) {
             <div className="column auto">
               <Navbar />
               <article className="article">
-                <h1 className="is-size-3 has-text-centered">
-                  {title}
-                </h1>
                 <section className="section is-size-6">
                   {children}
                 </section>
               </article>
+              <hr />
+              <footer className="has-text-right">
+                <div id="edamam-badge" data-color="white"></div>
+              </footer>
             </div>
           </div>
         </div>
