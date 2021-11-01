@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 import logoSquare from 'public/img/logo_square.png';
 
