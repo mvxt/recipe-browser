@@ -16,21 +16,6 @@ export default function Index(props) {
     'Chicken', 'Beef', 'Pork', 'Vegetarian', 'Vegan'
   ];
 
-  const getRecipes = async (options = []) => {
-    const output = await fetch('/api/recipes', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        query: activeTab.toLowerCase(),
-        options: options
-      })
-    }).then(result => result.json());
-
-    setRecipes(output.hits);
-  }
-
   const renderTabs = (tabName) => {
     return <Tab
       activeTab={activeTab}
@@ -74,6 +59,20 @@ export default function Index(props) {
 
   useEffect(() => {
     setRecipes([]);
+    const getRecipes = async (options = []) => {
+      const output = await fetch('/api/recipes', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          query: activeTab.toLowerCase(),
+          options: options
+        })
+      }).then(result => result.json());
+
+      setRecipes(output.hits);
+    }
     getRecipes();
   }, [activeTab]);
 

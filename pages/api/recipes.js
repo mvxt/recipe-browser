@@ -4,7 +4,7 @@ const edamamBaseUrl = process.env.EDAMAM_BASE_URL;
 const edamamAppId = process.env.EDAMAM_APP_ID;
 const edamamAppKey = process.env.EDAMAM_APP_KEY;
 
-export default async (req, res) => {
+const handler = async (req, res) => {
   let url = `${edamamBaseUrl}?type=public&app_id=${edamamAppId}&app_key=${edamamAppKey}`
 
   switch (req.method) {
@@ -35,3 +35,5 @@ export default async (req, res) => {
       return;
   }
 }
+
+export default handler;

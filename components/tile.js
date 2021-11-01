@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 export default function Tile(props) {
 
@@ -12,11 +13,12 @@ export default function Tile(props) {
           setShowModal(true);
         }}>
         <h2 className="title is-size-5 has-text-weight-bold">{recipe.label}</h2>
-        <figure className="image">
-          <img
+        <figure className="image is-square">
+          <Image
             src={recipe.image}
             alt={recipe.label}
             className="is-square"
+            layout="fill"
           />
         </figure>
         <p className="is-size-6">

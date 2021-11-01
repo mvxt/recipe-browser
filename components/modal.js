@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function RecipeModal(props) {
 
   const { isActive, recipeInfo, setShowModal } = props;
@@ -7,13 +9,17 @@ export default function RecipeModal(props) {
   }
 
   return <div className={"modal " + (isActive ? "is-active" : "")}>
-    <div className="modal-background"></div>
+    <div className="modal-background" onClick={() => setShowModal(false)}></div>
     <div className="modal-card box">
       <section className="modal-card-body">
         <h2 className="title">{recipeInfo.label}</h2>
         <hr />
-        <figure className="image is-16by9">
-          <img src={recipeInfo.image} alt={recipeInfo.label} />
+        <figure className="image is-square">
+          <Image
+            src={recipeInfo.image}
+            alt={recipeInfo.label}
+            layout="fill"
+          />
         </figure>
         <p className="has-text-right paragraph">
           <a href={recipeInfo.url}>(via {recipeInfo.source})</a>
